@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin · Class Updates</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="site-header glass">
+  <a href="index.html" class="brand">Class Updates</a>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="upcoming.html">Upcoming</a>
+    <a href="results.html">Results</a>
+  </nav>
+</header>
+
+<main class="container narrow">
+
+  <section id="loginView" class="glass panel hidden">
+    <h1>Admin login</h1>
+    <p class="muted">Only the class rep and approved posters can sign in.</p>
+    <form id="loginForm" novalidate>
+      <label for="email">Email</label>
+      <input type="email" id="email" autocomplete="username" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" autocomplete="current-password" required>
+      <p class="form-msg error hidden" id="loginError" role="alert"></p>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+  </section>
+
+  <section id="dashView" class="hidden">
+    <div class="dash-head">
+      <h1>Dashboard</h1>
+      <button class="btn btn-ghost" id="logout">Sign out</button>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="chip active" role="tab" data-tab="posts" aria-selected="true">Announcements</button>
+      <button class="chip" role="tab" data-tab="results" aria-selected="false">Results</button>
+    </div>
+
+    <div id="tab-posts">
+      <section class="glass panel">
+        <h2 id="postFormTitle">New announcement</h2>
+        <form id="postForm" novalidate>
+          <input type="hidden" id="postId">
+          <label for="title">Title</label>
+          <input type="text" id="title" maxlength="120" required>
+
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="Lectures">Lectures</option>
+            <option value="Events">Events</option>
+            <option value="Deadlines">Deadlines</option>
+            <option value="General" selected>General</option>
+          </select>
+
+          <label for="details">Details</label>
+          <textarea id="details" rows="6" required></textarea>
+
+          <div class="row">
+            <div>
+              <label for="eventDate">Date (optional)</label>
+              <input type="date" id="eventDate">
+            </div>
+            <div>
+              <label for="eventTime">Time (optional)</label>
+              <input type="time" id="eventTime">
+            </div>
+          </div>
+
+          <label for="venue">Venue (optional)</label>
+          <input type="text" id="venue" maxlength="80">
+
+          <label class="check"><input type="checkbox" id="pinned"> Pin to the top of the feed</label>
+
+          <p class="form-msg hidden" id="postMsg" role="status"></p>
+          <div class="actions">
+            <button type="submit" class="btn btn-primary" id="postSubmit">Post announcement</button>
+            <button type="button" class="btn btn-ghost hidden" id="postCancel">Cancel edit</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="manage">
+        <h2>Your announcements</h2>
+        <ul id="postList" class="manage-list"></ul>
+        <p class="state hidden" id="postListEmpty">No announcements yet.</p>
+      </section>
+    </div>
+
+    <div id="tab-results" class="hidden">
+      <section class="glass panel">
+        <h2>Add results</h2>
+        <form id="resultForm" novalidate>
+          <label for="rTitle">Title</label>
+          <input type="text" id="rTitle" placeholder="CSC 201 test results" maxlength="120" required>
+
+          <label for="rCourse">Course code</label>
+          <input type="text" id="rCourse" placeholder="CSC 201" maxlength="20" required>
+
+          <label for="rDate">Date released</label>
+          <input type="date" id="rDate" required>
+
+          <label for="rFile">Result file (PDF or image)</label>
+          <input type="file" id="rFile" accept="application/pdf,image/*" required>
+          <p class="muted small">Pick the file from your phone or laptop. Photos are shrunk automatically. PDFs can be up to about 5 MB.</p>
+
+          <p class="form-msg hidden" id="resultMsg" role="status"></p>
+          <button type="submit" class="btn btn-primary">Add results</button>
+        </form>
+      </section>
+
+      <section class="manage">
+        <h2>Your results</h2>
+        <ul id="resultList" class="manage-list"></ul>
+        <p class="state hidden" id="resultListEmpty">No results added yet.</p>
+      </section>
+    </div>
+  </section>
+
+  <p class="state" id="loading">Checking sign-in…</p>
+</main>
+
+<footer class="site-footer">
+  <p>Student-run class platform, not an official school website.</p>
+</footer>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>

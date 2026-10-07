@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upcoming · Class Updates</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="site-header glass">
+  <a href="index.html" class="brand">Class Updates</a>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="upcoming.html" class="active" aria-current="page">Upcoming</a>
+    <a href="results.html">Results</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="intro">
+    <h1>Upcoming</h1>
+    <p>Events and deadlines, soonest first.</p>
+  </section>
+
+  <section id="upcoming" class="feed" aria-live="polite">
+    <p class="state" id="loading">Loading upcoming items…</p>
+  </section>
+
+  <p class="state hidden" id="empty">Nothing coming up. Enjoy the break.</p>
+  <p class="state hidden error" id="error">Could not load upcoming items. Check your connection and refresh.</p>
+</main>
+
+<footer class="site-footer">
+  <p>Student-run class platform, not an official school website.</p>
+  <a href="admin.html">Admin</a>
+</footer>
+
+<script type="module" src="js/upcoming.js"></script>
+</body>
+</html>

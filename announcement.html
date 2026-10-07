@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Announcement · Class Updates</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<header class="site-header glass">
+  <a href="index.html" class="brand">Class Updates</a>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="upcoming.html">Upcoming</a>
+    <a href="results.html">Results</a>
+  </nav>
+</header>
+
+<main class="container narrow">
+  <a href="index.html" class="back">Back to announcements</a>
+
+  <article id="post" class="post glass hidden">
+    <div class="meta">
+      <span class="tag" id="postCat"></span>
+      <span class="tag tag-new hidden" id="postUpdated">Updated</span>
+      <time id="postPosted"></time>
+    </div>
+    <h1 id="postTitle"></h1>
+    <dl class="details">
+      <div class="hidden" id="rowDate"><dt>Date</dt><dd id="postDate"></dd></div>
+      <div class="hidden" id="rowVenue"><dt>Venue</dt><dd id="postVenue"></dd></div>
+    </dl>
+    <div class="body" id="postBody"></div>
+    <div class="actions">
+      <button class="btn btn-primary" id="shareWa">Share to WhatsApp</button>
+      <button class="btn btn-ghost" id="copyLink">Copy link</button>
+    </div>
+  </article>
+
+  <p class="state" id="loading">Loading announcement…</p>
+  <p class="state hidden error" id="error">This announcement could not be found. It may have been removed.</p>
+</main>
+
+<footer class="site-footer">
+  <p>Student-run class platform, not an official school website.</p>
+  <a href="admin.html">Admin</a>
+</footer>
+
+<script type="module" src="js/announcement.js"></script>
+</body>
+</html>
