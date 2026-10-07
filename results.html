@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,63 +55,3 @@
 
 <script type="module" src="js/results.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Results · Class Updates</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<div class="orbs" aria-hidden="true"><span></span><span></span><span></span></div>
-
-<header class="site-header glass">
-  <a href="index.html" class="brand">Class Updates</a>
-  <nav class="nav" aria-label="Main">
-    <a href="index.html">Home</a>
-    <a href="upcoming.html">Upcoming</a>
-    <a href="results.html" class="active" aria-current="page">Results</a>
-  </nav>
-</header>
-
-<main class="container">
-  <section class="intro">
-    <h1>Results</h1>
-    <p>Tap a result to open the PDF or image.</p>
-  </section>
-
-  <div class="search glass">
-    <label for="q" class="sr-only">Search results by course</label>
-    <input type="search" id="q" placeholder="Search by course, e.g. CSC 201" autocomplete="off">
-  </div>
-
-  <section id="results" class="feed" aria-live="polite">
-    <p class="state" id="loading">Loading results…</p>
-  </section>
-
-  <p class="state hidden" id="empty">No results found.</p>
-  <p class="state hidden error" id="error">Could not load results. Check your connection and refresh.</p>
-</main>
-
-<div class="viewer hidden" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
-  <div class="viewer-bar glass">
-    <h2 id="viewerTitle"></h2>
-    <div class="viewer-actions">
-      <a class="btn btn-primary" id="viewerDownload" href="#" target="_blank" rel="noopener" download>Download</a>
-      <button class="btn btn-ghost" id="viewerClose">Close</button>
-    </div>
-  </div>
-  <div class="viewer-body" id="viewerBody"></div>
-</div>
-
-<footer class="site-footer">
-  <p>Student-run class platform, not an official school website.</p>
-  <a href="admin.html">Admin</a>
-</footer>
-
-<script type="module" src="js/results.js"></script>
-</body>
->>>>>>> 43ff8bdfeea6492d8d2fb557dae9f3e57367353a
-</html>
