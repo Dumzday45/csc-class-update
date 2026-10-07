@@ -30,4 +30,4 @@ $("shareWa").onclick=()=>window.open("https://wa.me/?text="+encodeURIComponent($
 $("copyLink").onclick=async()=>{
   try{await navigator.clipboard.writeText(location.href);$("copyLink").textContent="Link copied"}
   catch{prompt("Copy this link:",location.href)}
-};
+}

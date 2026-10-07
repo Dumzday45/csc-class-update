@@ -1,3 +1,4 @@
+
 import{getPosts}from"./db.js";
 import{$,postCard,fail}from"./ui.js";
 
@@ -17,4 +18,3 @@ document.querySelector(".filters").addEventListener("click",e=>{
   draw();
 });
 
-try{posts=await getPosts();draw()}catch{fail()}
